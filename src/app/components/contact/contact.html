@@ -1,0 +1,5 @@
+<section id="contacto" class="wrap contact"><p class="kicker c">Contacto</p><h2>¿Te gustaría conocer más<br>sobre mi experiencia?</h2>
+<div class="soc red"><a [href]="mail"><img src="icons/mail.svg" alt="Correo"></a><a [href]="wa" target="_blank"><img src="icons/whatsapp.svg" alt="WhatsApp"></a><a [href]="li" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn"></a><a [href]="gh" target="_blank"><img src="icons/github.svg" alt="GitHub"></a></div>
+<form class="form" (ngSubmit)="send()"><label>Nombre<input name="n" [(ngModel)]="name" placeholder="Tu nombre" required></label>
+<label>Mensaje<textarea name="m" rows="6" [(ngModel)]="msg" placeholder="Cuéntame el motivo de tu mensaje..." required></textarea></label>
+<button class="btn" type="submit">Enviar mensaje</button></form></section>

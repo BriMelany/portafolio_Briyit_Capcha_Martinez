@@ -1,0 +1,3 @@
+<section id="habilidades" class="wrap"><p class="kicker">Habilidades</p><h2>Conocimientos y Tecnologías</h2>
+@for(g of skills;track g.t;let i=$index){<div class="acc"><button class="acch" (click)="open.set(open()===i?-1:i)" [attr.aria-expanded]="open()===i">{{g.t}}<img [src]="open()===i?'icons/minus.svg':'icons/plus.svg'" alt="" class="pm"></button>
+<div class="accw" [class.open]="open()===i"><ul class="accb">@for(k of g.i;track k[1]){<li>@if(k[0]){<img [src]="'icons/'+k[0]+'.png'" alt="">}{{k[1]}}</li>}</ul></div></div>}</section>

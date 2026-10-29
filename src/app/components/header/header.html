@@ -1,0 +1,9 @@
+<header class="nav" [class.sc]="scrolled()">
+<div class="nin">
+<a routerLink="/" class="logo" (click)="m.set(false)" aria-label="Briyit C. Martinez - Inicio">Briyit C. Martinez</a>
+<nav class="dnav" aria-label="Principal">@for(l of links;track l.id){<a routerLink="/" [fragment]="l.id" [class.on]="active()===l.id">{{l.t}}</a>}</nav>
+<a class="btn dl hcv" [href]="cv" download>Descargar CV</a>
+<button class="burger" (click)="m.set(!m())" [class.x]="m()" aria-label="Menú" [attr.aria-expanded]="m()"><span></span><span></span><span></span></button>
+</div>
+<div class="mmenu" [class.open]="m()"><nav>@for(l of links;track l.id){<a routerLink="/" [fragment]="l.id" [class.on]="active()===l.id" (click)="m.set(false)">{{l.t}}</a>}</nav><a class="btn dl" [href]="cv" download>Descargar CV</a></div>
+</header>

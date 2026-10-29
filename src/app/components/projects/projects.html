@@ -1,0 +1,5 @@
+<section id="proyectos" class="wrap"><p class="kicker c">Proyectos</p><h2 class="c">Trabajos seleccionados</h2>
+<div class="chips">@for(f of filters;track f.k){<button [class.on]="flt()===f.k" (click)="flt.set(f.k)">{{f.l}}</button>}</div>
+<div class="grid">@for(p of list();track p.id){<article class="pcard"><div class="shot">@if(viewing()===p.id){<div class="pan" [style.background-image]="'url('+p.full+')'"></div>}@else{<a [routerLink]="['/proyecto',p.id]"><img [src]="p.thumb" [alt]="p.title" loading="lazy"></a>}@if(p.full){<button class="view" (click)="viewing.set(viewing()===p.id?'':p.id)">{{viewing()===p.id?'✕ Cerrar':'↕ Ver página completa'}}</button>}</div>
+<h3><a [routerLink]="['/proyecto',p.id]">{{p.title}}</a></h3><p>{{p.desc}}</p><div class="tags">@for(t of p.tags;track t){<span>{{t}}</span>}</div>
+<div class="pact"><a [routerLink]="['/proyecto',p.id]">Ver caso →</a></div></article>}</div></section>

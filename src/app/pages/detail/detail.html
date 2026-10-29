@@ -1,0 +1,7 @@
+@if(p(); as p){<main class="detail">
+<img class="dhero" [src]="p.thumb" [alt]="p.title">
+<p class="kicker">{{p.label}}</p><h1>{{p.title}}</h1>
+<h2>Descripción del Caso</h2><p>{{p.caso}}</p><h2>Reto</h2><p>{{p.reto}}</p><h2>Solución</h2><p>{{p.solucion}}</p>
+@if(p.gallery.length){<div class="gal">@for(g of p.gallery;track g){<img [src]="g" [alt]="p.title" loading="lazy">}</div>}
+<a class="btn" [href]="p.url" target="_blank" rel="noopener">{{p.btn}}</a> <a class="btn ghost" routerLink="/" fragment="proyectos">← Volver a proyectos</a>
+</main>}
